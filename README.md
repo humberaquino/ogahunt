@@ -25,15 +25,15 @@ The idea of this phase is to make the app as independent as possible to a specif
 prefer.
 
 - [x] Make the code open source.
-- [] Allow the iOS app to select the backend to connect to. Now is hardcoded per environment which requires anyone to publish the same app 
+- [ ] Allow the iOS app to select the backend to connect to. Now is hardcoded per environment which requires anyone to publish the same app 
 with a different backend, something that is probably not allowed AFAIK. 
-- [] Improve setup and config documentation.
-- [] Increase test quality and coverage.
+- [ ] Improve setup and config documentation.
+- [ ] Increase test quality and coverage.
 
 ### Phase 2
 
 A better frontend experience is the goal. The iOS app is a bit limiting. A web frontend is the intention.
 
-- [] Define with FW is better suited for this. E.g. Phoenix, LiveView or a SPA (i.e. React/Redux).
-- [] Implement a 1:1 feature match with the iOS app.
+- [ ] Define with FW is better suited for this. E.g. Phoenix, LiveView or a SPA (i.e. React/Redux).
+- [ ] Implement a 1:1 feature match with the iOS app.
 
