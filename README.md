@@ -1,8 +1,8 @@
-# Ogahunt 
+# OgaHunt 
 
 A real state hunting app for teams.
 
-## Overal Arch
+## Overall Arch
 
 The system has two main parts: the REST/HTTP API backend and the iOS app as the frontend.
 The former is under the `web` folder and the later under `iso`.
@@ -15,7 +15,7 @@ as a team, allowing people to easily collaborate to identify interesting deals o
 The current state of the app only allows to interact with the app using an iPhone but a Browser client would definitely be a better 
 solution to interact with the app. 
 
-## Roadmap
+## Road map
 
 Here's a list of ideas to keep the project improving and achieve the goals listed in the previous section.
 
