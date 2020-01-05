@@ -1,0 +1,48 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  desc "Push a new beta build to TestFlight"
+
+  lane :test do
+    run_tests(scheme: "Development")
+  end
+
+  lane :beta do
+    # increment_build_number
+    build_app(workspace: "OgaHunt.xcworkspace", scheme: "Production")
+    upload_to_testflight(skip_waiting_for_build_processing: true)
+  end
+
+  lane :refresh_dsyms do |options|
+    download_dsyms(version: options[:version])
+    upload_symbols_to_crashlytics(api_token: "bfe09e5d5a906482a99f0843e0e34df5d3524205")   # Upload them to Crashlytics
+    clean_build_artifacts           # Delete the local dSYM files
+  end
+
+  lane :screenshots do 
+    capture_screenshots(reinstall_app: true)
+  end
+
+  lane :release do
+    build_app(scheme: "Production",
+              workspace: "OgaHunt.xcworkspace")
+    # capture_screenshots(reinstall_app: true)
+    upload_to_app_store(force: true)
+  end
+
+end

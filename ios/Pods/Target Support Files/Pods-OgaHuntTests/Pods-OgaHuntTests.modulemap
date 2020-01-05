@@ -1,0 +1,6 @@
+framework module Pods_OgaHuntTests {
+  umbrella header "Pods-OgaHuntTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

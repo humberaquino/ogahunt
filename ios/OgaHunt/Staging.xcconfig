@@ -1,0 +1,11 @@
+//
+//  Staging.xcconfig
+//  OgaHunt
+//
+//  Created by Humberto Aquino on 10/4/18.
+//  Copyright © 2018 Humberto Aquino. All rights reserved.
+//
+
+oh_api_host         = stg.ogahunt.app
+oh_api_scheme       = https
+

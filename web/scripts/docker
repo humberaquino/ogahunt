@@ -1,0 +1,73 @@
+#!/bin/bash -e
+
+VERSION=$(./scripts/utils/grab-version sha1)
+CONF_FILE=./.env
+
+# Common config
+if [ ! -f $CONF_FILE ]; then
+    echo "F: Missing config file: $CONF_FILE"
+    exit 1
+fi
+source $CONF_FILE
+
+if [ $# -lt 1 ]; then
+    echo "E: Missing action parameter"
+    exit 1
+fi
+
+if [ $# -ge 2 ]; then
+    IMAGE_URL=$REPO_URL:$2
+else
+    IMAGE_URL=$REPO_URL:$VERSION
+fi
+
+build_docker() {
+    echo "--> Building image: $IMAGE_URL"
+    docker build -t $IMAGE_URL -f .docker/Dockerfile .
+}
+
+push_docker() {
+    echo "--> Pushing image to Docker Hub: $IMAGE_URL"
+    docker push $IMAGE_URL
+}
+
+run_docker() {
+    echo "--> Running image: $IMAGE_URL"
+
+    docker run \
+        -e SECRET_KEY_BASE=$SECRET_KEY_BASE \
+        -e APP_PORT=$APP_PORT \
+        -e DB_URL=$DB_URL \
+        -e DB_SSL=$DB_SSL \
+        -e DB_POOL_SIZE=$DB_POOL_SIZE \
+        -e GCS_SERVICE_ACCOUNT_FILE=$GCS_SERVICE_ACCOUNT_FILE \
+        -e GCS_IMAGE_BUCKET=$GCS_IMAGE_BUCKET \
+        -p $APP_PORT:$APP_PORT $IMAGE_URL
+}
+
+case "$1" in
+
+    "build"|b)
+        build_docker
+    ;;
+
+    "push"|p)
+        push_docker
+    ;;
+
+    "run"|r)
+        run_docker
+    ;;
+
+    "build-push"|bp)
+        build_docker
+        push_docker
+    ;;
+
+
+    *)
+        echo "E: Unknown option: $1"
+        exit 1
+    ;;
+
+esac

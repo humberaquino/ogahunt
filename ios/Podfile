@@ -1,0 +1,69 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '11.0'
+
+target 'OgaHunt' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for OgaHunt
+  pod 'Eureka', '~> 4.3.0'
+  pod 'SnapKit', '~> 4.0.0'
+
+  pod 'AELog'
+  pod 'AEConsole'
+
+  pod 'SwiftPhotoGallery'
+  pod 'ImageSlideshow', '~> 1.5'
+
+  pod 'ImagePicker'
+
+  pod 'Tabman', '~> 1.9.2'
+
+  # Formatting
+  pod 'DateToolsSwift'
+  pod 'PhoneNumberKit', '~> 2.1'
+
+  # Networking
+  pod 'Alamofire', '~> 4.7.3'
+  pod 'PromisesSwift', '~> 1.2.3'
+  pod 'ObjectMapper', '~> 3.3'
+
+  # Debugging
+  # pod 'AlamofireNetworkActivityLogger', '~> 2.3'
+
+  pod 'PKHUD', '~> 5.0'
+  pod 'SwiftDate', '~> 5.0'
+
+  pod 'Kingfisher', '~> 4.10.0'
+  pod "ImageSlideshow/Kingfisher"
+
+  pod 'UIColor_Hex_Swift', '~> 4.2.0'
+  pod 'SwiftyJSON', '~> 4.0'
+
+  # CamMap
+#   pod 'CamMap', :path => '~/Projects/cammap'
+  pod 'CamMap'
+
+  # force the sub specs in the array below to use swift version 4.0
+  prev_swift_pods = ['ImagePicker', 'SwiftPhotoGallery']
+  post_install do |installer|
+      installer.pods_project.targets.each do |target|
+          if prev_swift_pods.include? target.name
+              target.build_configurations.each do |config|
+                  config.build_settings['SWIFT_VERSION'] = '4.0'
+              end
+          end
+      end
+  end
+
+  target 'OgaHuntTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
+
+target 'OgaHuntUITests' do
+    inherit! :none
+    # Pods for testing
+end

@@ -1,0 +1,2 @@
+* Adds a new and faster way to take photo and location at the same time.
+* Misc bug fixes

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+ver=$(cat VERSION | tr -d '\n')
+
+case $1 in
+
+    sha1)
+        sha=$(git rev-parse HEAD | head -c 8 | tr -d '\n')
+        echo "v${ver}_${sha}"
+    ;;
+    *)
+        echo -n "v$ver"
+    ;;
+esac

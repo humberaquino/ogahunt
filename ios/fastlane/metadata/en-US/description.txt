@@ -1,0 +1,9 @@
+A property hunting app for your team.
+
+Key features:
+* Collect photos, location, and details of properties fast.
+* Organize your hunts by filtering them efficiently.
+* Invite and collaborate with a team of people that you choose.
+* Assign hunts to team members to distribute them.
+* Share contacts within the app to associate agents with properties.
+* Have a global view of all activities within your team.

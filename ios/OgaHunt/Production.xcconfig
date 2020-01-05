@@ -1,0 +1,10 @@
+//
+//  Production.xcconfig
+//  OgaHunt
+//
+//  Created by Humberto Aquino on 9/7/18.
+//  Copyright © 2018 Humberto Aquino. All rights reserved.
+//
+
+oh_api_host         = ogahunt.app
+oh_api_scheme       = https

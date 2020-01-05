@@ -1,0 +1,33 @@
+/* This file is for your main application css. */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.logo {
+  object-fit: cover;
+}
+
+.input-field {
+  @apply block w-full bg-gray-100 text-gray-700 border border-gray-500 rounded py-3 px-4 mb-3 leading-tight;
+}
+
+.input-field:focus {
+  @apply outline-none bg-white;
+}
+
+.input-label {
+  @apply block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2;
+}
+
+.text-area {
+  @apply input-field h-20;
+}
+
+.select-field {
+  @apply block appearance-none w-full bg-gray-100 text-gray-700 border border-gray-500 rounded py-3 px-4 pr-8 rounded leading-tight;
+}
+
+.select-field:focus {
+  @apply outline-none bg-white border-gray-500;
+}

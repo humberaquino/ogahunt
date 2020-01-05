@@ -1,0 +1,23 @@
+${PODS_ROOT}/Target Support Files/Pods-OgaHunt/Pods-OgaHunt-frameworks.sh
+${BUILT_PRODUCTS_DIR}/AEConsole/AEConsole.framework
+${BUILT_PRODUCTS_DIR}/AELog/AELog.framework
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/AutoInsetter/AutoInsetter.framework
+${BUILT_PRODUCTS_DIR}/CamMap/CamMap.framework
+${BUILT_PRODUCTS_DIR}/DateToolsSwift/DateToolsSwift.framework
+${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework
+${BUILT_PRODUCTS_DIR}/ImagePicker/ImagePicker.framework
+${BUILT_PRODUCTS_DIR}/ImageSlideshow/ImageSlideshow.framework
+${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework
+${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework
+${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework
+${BUILT_PRODUCTS_DIR}/Pageboy/Pageboy.framework
+${BUILT_PRODUCTS_DIR}/PhoneNumberKit/PhoneNumberKit.framework
+${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework
+${BUILT_PRODUCTS_DIR}/PromisesSwift/Promises.framework
+${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework
+${BUILT_PRODUCTS_DIR}/SwiftDate/SwiftDate.framework
+${BUILT_PRODUCTS_DIR}/SwiftPhotoGallery/SwiftPhotoGallery.framework
+${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework
+${BUILT_PRODUCTS_DIR}/Tabman/Tabman.framework
+${BUILT_PRODUCTS_DIR}/UIColor_Hex_Swift/UIColor_Hex_Swift.framework
