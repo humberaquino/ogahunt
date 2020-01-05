@@ -32,8 +32,18 @@ with a different backend, something that is probably not allowed AFAIK.
 
 ### Phase 2
 
-A better frontend experience is the goal. The iOS app is a bit limiting. A web frontend is the intention.
+A better frontend experience is the goal. The iOS app is a bit limiting. A web frontend is the intention with the removal of 
+non necessary features. E.g. registration.
 
 - [ ] Define with FW is better suited for this. E.g. Phoenix, LiveView or a SPA (i.e. React/Redux).
 - [ ] Implement a 1:1 feature match with the iOS app.
+- [ ] Add an initial root user after the installation who can create team admins.
 
+### Phase 3
+
+There are some improvements that can be applied to remove restrictions. E.g. GCS
+
+- [ ] Allow selecting a file storage like AWS or locally.
+- [ ] Export and import accounts ()?
+- [ ] Basic reporting
+ 
